@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Projet 1</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      background: #fafafa;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Nos services</h1>
+  </header>
+
+  <!-- Bouton burger -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Galerie</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/service1.jpg" alt="Service 1">
+        <p>Déploiement Cloud</p>
+      </div>
+      <div class="card">
+        <img src="assets/service2.jpg" alt="Service 2">
+        <p>Sécurisation SSL</p>
+      </div>
+      <div class="card">
+        <img src="assets/service3.jpg" alt="Service 3">
+        <p>Automatisation GitHub Actions</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Équipe : Nicolas Beaudoin & Lucas St André</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

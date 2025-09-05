@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Projet 1</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    function validateForm() {
+      let name = document.forms["contactForm"]["name"].value;
+      let email = document.forms["contactForm"]["email"].value;
+      let message = document.forms["contactForm"]["message"].value;
+      if (!name || !email || !message) {
+        alert("Tous les champs sont obligatoires !");
+        return false;
+      }
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        alert("Veuillez entrer un email valide !");
+        return false;
+      }
+      alert("Message envoyé avec succès !");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact</h1>
+  </header>
+
+  <!-- Bouton burger -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Formulaire de contact</h2>
+    <form name="contactForm" onsubmit="return validateForm()">
+      <label for="name">Nom :</label><br>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="message">Message :</label><br>
+      <textarea id="message" name="message"></textarea><br><br>
+
+      <input type="submit" value="Envoyer">
+    </form>
+  </div>
+
+  <footer>
+    <p>Équipe : Nicolas Beaudoin & Lucas St André</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #004aad;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+nav {
+  background: #00337a;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #00337a;
+  color: white;
+  margin-top: 30px;
+}
+
+/* ✅ Burger menu */
+.menu-toggle {
+  display: none;
+  background: #00337a;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    display: none; /* caché par défaut */
+  }
+
+  nav ul.show {
+    display: flex; /* affiché quand on clique */
+  }
+
+  .menu-toggle {
+    display: block; /* bouton visible en mobile */
+  }
+
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

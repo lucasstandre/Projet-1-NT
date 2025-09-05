@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Projet 1</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Projet 1 - Exploration de nouvelles technologies</h1>
+  </header>
+
+  <!-- Bouton burger -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Bienvenue</h2>
+    <p>Bienvenue sur notre site web du <strong>Projet 1</strong> !</p>
+    <img src="assets/banner.jpg" alt="Bannière" style="width:100%; border-radius:8px;">
+  </div>
+
+  <footer>
+    <p>Équipe : Nicolas Beaudoin & Lucas St André</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

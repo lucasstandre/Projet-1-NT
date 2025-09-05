@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Projet 1</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>À propos</h1>
+  </header>
+
+  <!-- Bouton burger -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav>
+    <ul id="menu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Notre projet</h2>
+    <p>Nous sommes <strong>Nicolas Beaudoin</strong> et <strong>Lucas St André</strong>, deux étudiants travaillant sur ce projet afin d’explorer les technologies cloud et la mise en place d’un site web sécurisé avec SSL.</p>
+  </div>
+
+  <footer>
+    <p>Équipe : Nicolas Beaudoin & Lucas St André</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
