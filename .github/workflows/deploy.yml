@@ -16,12 +16,12 @@ jobs:
       - name: Copy Site folder to server
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: 20.151.48.211
+          host: ${{ secrets.SERVER_IP }}
           username: azureuser_NT
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "Site/*"
-          target: "/var/www/mon-site"
-          rm: true
+          target: "/var/www/html"
+
 
       - name: Restart nginx
         uses: appleboy/ssh-action@v0.1.7
