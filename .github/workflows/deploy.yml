@@ -19,8 +19,9 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: azureuser_NT
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "Site/*"
+          source: "Site/"
           target: "/var/www/html/"
+          strip_components: true
 
 
       - name: Restart nginx
