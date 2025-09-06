@@ -20,7 +20,7 @@ jobs:
           username: azureuser_NT
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "Site/*"
-          target: "/var/www/html"
+          target: "/var/www/html/"
 
 
       - name: Restart nginx
